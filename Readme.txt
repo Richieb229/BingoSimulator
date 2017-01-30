@@ -21,7 +21,7 @@ To play the bingo game please follow the step below:
 2. A message will appear to let you know your ticket purchase has been successful.  Click 'OK' on this message.
 3. Click on the 'Play Bingo!' button to begin the game.
 4. The game will begin and the numbers will appear within the red bingo ball at a set interval.
-5. When a ball is drawn it is marked of automatically on the bingo card.
+5. When a ball is drawn it is marked off automatically on the bingo card.
 6. The player can click the corresponding number on their bingo ticket and this will mark it red if the number has been drawn, or it will stay white if the number has yet to be drawn.
 7. The last box on each ticket automatically updates the number of remaining unmarked numbers.
 8. The game is won when all the number on a single ticket have been called.
