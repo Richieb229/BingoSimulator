@@ -144,7 +144,7 @@ function playGame() {
             clearInterval(setInter);
             swal("Sorry, you didn't win", "Better luck next time!");
         }
-    }, 400); //Interval of random ball change
+    }, 5000); //Interval of random ball change
 };
 
 //On Click of value on ticket numbers
