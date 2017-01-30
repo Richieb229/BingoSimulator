@@ -1,0 +1,58 @@
+﻿body {
+    margin: 0;
+    padding: 4px 4px 4px 4px;
+    
+    background-color: #00b2ac
+}
+
+
+/*table {
+            margin: 10px;
+            border-collapse: separate;
+        }
+
+        td {
+            background-clip: padding-box;
+            border-radius: 5px;
+            background-color: #f5f098;
+            color: #000000;
+            border: 5px solid #d8ff9e;
+        }*/
+.table-hover tbody tr:hover > td {
+    cursor: pointer;
+}
+
+tr {
+   line-height: 2px !important;
+   min-height: 2px !important;
+   height: 2px !important;
+}
+
+
+#circle {
+  /*position: relative;*/
+  background-color: #f00;
+  margin: 20px auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.outer {
+       outline: 2px solid #CCC;
+       border: 1px solid #999;
+       background-color: #fcee71;
+}
+
+
+

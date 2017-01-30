@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="bingo.css" rel="stylesheet" type="text/css">
+    <script src="bingo.js"></script>
+    <script src="Scripts/underscore.min.js"></script>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <link href="style/sweetalert.css" rel="stylesheet" />
+    <script src="Scripts/sweetalert.min.js"></script>
+
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <script>
+        function buyTickets() {
+
+            swal("Tickets purchased!", "Click 'Play Bingo!' to begin game", "success");
+            document.getElementById('tickets').style.visibility = 'visible';
+            document.getElementById('buyTickets').style.visibility = 'Hidden';
+            document.getElementById('playGame').style.visibility = 'visible';
+
+        };
+
+        function newGame() {
+
+            location.reload(true);
+        };
+    </script>
+
+    <div id="mainContainer" style="position:relative">
+
+        <div class="outer" style="float:left; width: 33%; height:100%;">
+            <table class="table table-bordered">
+                <tr>
+                    <td id="A_1">1</td>
+                    <td id="A_2">2</td>
+                    <td id="A_3">3</td>
+                    <td id="A_4">4</td>
+                    <td id="A_5">5</td>
+                    <td id="A_6">6</td>
+                    <td id="A_7">7</td>
+                    <td id="A_8">8</td>
+                    <td id="A_9">9</td>
+                    <td id="A_10">10</td>
+                </tr>
+                <tr>
+                    <td id="A_11">11</td>
+                    <td id="A_12">12</td>
+                    <td id="A_13">13</td>
+                    <td id="A_14">14</td>
+                    <td id="A_15">15</td>
+                    <td id="A_16">16</td>
+                    <td id="A_17">17</td>
+                    <td id="A_18">18</td>
+                    <td id="A_19">19</td>
+                    <td id="A_20">20</td>
+                </tr>
+                <tr>
+                    <td id="A_21">21</td>
+                    <td id="A_22">22</td>
+                    <td id="A_23">23</td>
+                    <td id="A_24">24</td>
+                    <td id="A_25">25</td>
+                    <td id="A_26">26</td>
+                    <td id="A_27">27</td>
+                    <td id="A_28">28</td>
+                    <td id="A_29">29</td>
+                    <td id="A_30">30</td>
+                </tr>
+                <tr>
+                    <td id="A_31">31</td>
+                    <td id="A_32">32</td>
+                    <td id="A_33">33</td>
+                    <td id="A_34">34</td>
+                    <td id="A_35">35</td>
+                    <td id="A_36">36</td>
+                    <td id="A_37">37</td>
+                    <td id="A_38">38</td>
+                    <td id="A_39">39</td>
+                    <td id="A_40">40</td>
+                </tr>
+                <tr>
+                    <td id="A_41">41</td>
+                    <td id="A_42">42</td>
+                    <td id="A_43">43</td>
+                    <td id="A_44">44</td>
+                    <td id="A_45">45</td>
+                    <td id="A_46">46</td>
+                    <td id="A_47">47</td>
+                    <td id="A_48">48</td>
+                    <td id="A_49">49</td>
+                    <td id="A_50">50</td>
+                </tr>
+                <tr>
+                    <td id="A_51">51</td>
+                    <td id="A_52">52</td>
+                    <td id="A_53">53</td>
+                    <td id="A_54">54</td>
+                    <td id="A_55">55</td>
+                    <td id="A_56">56</td>
+                    <td id="A_57">57</td>
+                    <td id="A_58">58</td>
+                    <td id="A_59">59</td>
+                    <td id="A_60">60</td>
+                </tr>
+                <tr>
+                    <td id="A_61">61</td>
+                    <td id="A_62">62</td>
+                    <td id="A_63">63</td>
+                    <td id="A_64">64</td>
+                    <td id="A_65">65</td>
+                    <td id="A_66">66</td>
+                    <td id="A_67">67</td>
+                    <td id="A_68">68</td>
+                    <td id="A_69">69</td>
+                    <td id="A_70">70</td>
+                </tr>
+                <tr>
+                    <td id="A_71">71</td>
+                    <td id="A_72">72</td>
+                    <td id="A_73">73</td>
+                    <td id="A_74">74</td>
+                    <td id="A_75">75</td>
+                    <td id="A_76">76</td>
+                    <td id="A_77">77</td>
+                    <td id="A_78">78</td>
+                    <td id="A_79">79</td>
+                    <td id="A_80">80</td>
+                </tr>
+                <tr>
+                    <td id="A_81">81</td>
+                    <td id="A_82">82</td>
+                    <td id="A_83">83</td>
+                    <td id="A_84">84</td>
+                    <td id="A_85">85</td>
+                    <td id="A_86">86</td>
+                    <td id="A_87">87</td>
+                    <td id="A_88">88</td>
+                    <td id="A_89">89</td>
+                    <td id="A_90">90</td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="float:left; width: 34%; height:600px; text-align:center">
+            <div>
+                <img src="images/b90_logo.png" />
+            </div>
+
+            <div style="position:relative" id="circle">
+                <div style="position:absolute" id="text"></div>
+            </div>
+            <div>
+                <input id="playGame" type="button" class="btn btn-info" style="visibility:hidden" value="Play Bingo!" onclick="playGame()">
+            </div>
+            <div>
+                <input id="buyTickets" type="button" class="btn btn-info" value="Buy Tickets" onclick="buyTickets()">
+            </div>
+            <div>
+                <input id="newGame" type="button" class="btn btn-info" style="visibility:hidden" value="New Game" onclick="newGame()">
+            </div>
+        </div>
+
+
+        <div id="tickets" style="float:left; width: 33%; height:500px; visibility:hidden">
+            <table style="width: auto; background-color:white" class="table table-bordered table-hover table-condensed">
+                <tr>
+                    <td id="T_1R_1C_1" onclick="checkTicketNumber(this.id)">1</td>
+                    <td id="T_1R_1C_2" onclick="checkTicketNumber(this.id)">17</td>
+                    <td id="T_1R_1C_3" onclick="checkTicketNumber(this.id)">22</td>
+                    <td>  </td>
+                    <td id="T_1R_1C_5" onclick="checkTicketNumber(this.id)">47</td>
+                    <td id="T_1R_1C_6" onclick="checkTicketNumber(this.id)">52</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="ticket1Remain" rowspan="3">15 <Br />To go</td>
+                </tr>
+                <tr>
+                    <td id="T_1R_2C_1" onclick="checkTicketNumber(this.id)">4</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_1R_2C_4" onclick="checkTicketNumber(this.id)">36</td>
+                    <td>  </td>
+                    <td id="T_1R_2C_6" onclick="checkTicketNumber(this.id)">53</td>
+                    <td id="T_1R_2C_7" onclick="checkTicketNumber(this.id)">60</td>
+                    <td id="T_1R_2C_8" onclick="checkTicketNumber(this.id)">70</td>
+                    <td>  </td>
+                </tr>
+                <tr>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_1R_3C_3" onclick="checkTicketNumber(this.id)">26</td>
+                    <td id="T_1R_3C_4" onclick="checkTicketNumber(this.id)">37</td>
+                    <td id="T_1R_3C_5" onclick="checkTicketNumber(this.id)">49</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_1R_3C_8" onclick="checkTicketNumber(this.id)">74</td>
+                    <td id="T_1R_3C_9" onclick="checkTicketNumber(this.id)">81</td>
+                </tr>
+
+            </table>
+            <table style="width: auto; background-color:white" class="table table-bordered table-hover table-condensed">
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td id="T_2R_1C_3" onclick="checkTicketNumber(this.id)">23</td>
+                    <td id="T_2R_1C_4" onclick="checkTicketNumber(this.id)">34</td>
+                    <td> </td>
+                    <td id="T_2R_1C_6" onclick="checkTicketNumber(this.id)">55</td>
+                    <td>  </td>
+                    <td id="T_2R_1C_8" onclick="checkTicketNumber(this.id)">75</td>
+                    <td id="T_2R_1C_9" onclick="checkTicketNumber(this.id)">83</td>
+                    <td id="ticket2Remain" rowspan="3">15 <Br />To go</td>
+                </tr>
+                <tr>
+                    <td id="T_2R_2C_1" onclick="checkTicketNumber(this.id)">2</td>
+                    <td id="T_2R_2C_2" onclick="checkTicketNumber(this.id)">15</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_2R_2C_5" onclick="checkTicketNumber(this.id)">40</td>
+                    <td id="T_2R_2C_6" onclick="checkTicketNumber(this.id)">58</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_2R_2C_9" onclick="checkTicketNumber(this.id)">88</td>
+                </tr>
+                <tr>
+                    <td>  </td>
+                    <td id="T_2R_3C_2" onclick="checkTicketNumber(this.id)">19</td>
+                    <td id="T_2R_3C_3" onclick="checkTicketNumber(this.id)">28</td>
+                    <td></td>
+                    <td id="T_2R_3C_4" onclick="checkTicketNumber(this.id)">44</td>
+                    <td>  </td>
+                    <td id="T_2R_3C_7" onclick="checkTicketNumber(this.id)">67</td>
+                    <td>  </td>
+                    <td id="T_2R_3C_9" onclick="checkTicketNumber(this.id)">89</td>
+                </tr>
+            </table>
+            <table style="width: auto; background-color:white" class="table table-bordered table-hover table-condensed">
+                <tr>
+                    <td id="T_3R_1C_1" onclick="checkTicketNumber(this.id)">6</td>
+                    <td id="T_3R_1C_2" onclick="checkTicketNumber(this.id)">12</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_3R_1C_5" onclick="checkTicketNumber(this.id)">41</td>
+                    <td id="T_3R_1C_6" onclick="checkTicketNumber(this.id)">50</td>
+                    <td>  </td>
+                    <td id="T_3R_1C_8" onclick="checkTicketNumber(this.id)">73</td>
+                    <td>  </td>
+                    <td id="ticket3Remain" rowspan="3">15 <Br />To go</td>
+                </tr>
+                <tr>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_3R_2C_3" onclick="checkTicketNumber(this.id)">24</td>
+                    <td id="T_3R_2C_4" onclick="checkTicketNumber(this.id)">33</td>
+                    <td id="T_3R_2C_5" onclick="checkTicketNumber(this.id)">48</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_3R_2C_8" onclick="checkTicketNumber(this.id)">76</td>
+                    <td id="T_3R_2C_9" onclick="checkTicketNumber(this.id)">84</td>
+                </tr>
+                <tr>
+                    <td id="T_3R_3C_1" onclick="checkTicketNumber(this.id)">7</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_3R_3C_4" onclick="checkTicketNumber(this.id)">38</td>
+                    <td>  </td>
+                    <td id="T_3R_3C_6" onclick="checkTicketNumber(this.id)">57</td>
+                    <td id="T_3R_3C_7" onclick="checkTicketNumber(this.id)">61</td>
+                    <td>  </td>
+                    <td id="T_3R_3C_9" onclick="checkTicketNumber(this.id)">86</td>
+                </tr>
+            </table>
+            <table style="width: auto; background-color:white" class="table table-bordered table-hover table-condensed">
+                <tr>
+                    <td id="T_4R_1C_1" onclick="checkTicketNumber(this.id)">5</td>
+                    <td id="T_4R_1C_2" onclick="checkTicketNumber(this.id)">11</td>
+                    <td>  </td>
+                    <td id="T_4R_1C_4" onclick="checkTicketNumber(this.id)">32</td>
+                    <td id="T_4R_1C_5" onclick="checkTicketNumber(this.id)">43</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_4R_1C_8" onclick="checkTicketNumber(this.id)">78</td>
+                    <td>  </td>
+                    <td id="ticket4Remain" rowspan="3">15 <Br />To go</td>
+                </tr>
+                <tr>
+                    <td>  </td>
+                    <td id="T_4R_2C_2" onclick="checkTicketNumber(this.id)">16</td>
+                    <td>  </td>
+                    <td id="T_4R_2C_4" onclick="checkTicketNumber(this.id)">39</td>
+                    <td>  </td>
+                    <td id="T_4R_2C_6" onclick="checkTicketNumber(this.id)">56</td>
+                    <td id="T_4R_2C_7" onclick="checkTicketNumber(this.id)">63</td>
+                    <td>  </td>
+                    <td id="T_4R_2C_9" onclick="checkTicketNumber(this.id)">80</td>
+                </tr>
+                <tr>
+                    <td id="T_4R_3C_1" onclick="checkTicketNumber(this.id)">8</td>
+                    <td id="T_4R_3C_2" onclick="checkTicketNumber(this.id)">18</td>
+                    <td id="T_4R_3C_3" onclick="checkTicketNumber(this.id)">20</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_4R_3C_7" onclick="checkTicketNumber(this.id)">65</td>
+                    <td>  </td>
+                    <td id="T_4R_3C_9" onclick="checkTicketNumber(this.id)">90</td>
+                </tr>
+            </table>
+            <table style="width: auto; background-color:white" class="table table-bordered table-hover table-condensed">
+                <tr>
+                    <td>  </td>
+                    <td id="T_5R_1C_2" onclick="checkTicketNumber(this.id)">10</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_5R_1C_5" onclick="checkTicketNumber(this.id)">45</td>
+                    <td id="T_5R_1C_6" onclick="checkTicketNumber(this.id)">59</td>
+                    <td id="T_5R_1C_7" onclick="checkTicketNumber(this.id)">62</td>
+                    <td>  </td>
+                    <td id="T_5R_1C_9" onclick="checkTicketNumber(this.id)">82</td>
+                    <td id="ticket5Remain" rowspan="3">15 <Br />To go</td>
+                </tr>
+                <tr>
+                    <td>  </td>
+                    <td id="T_5R_2C_2" onclick="checkTicketNumber(this.id)">14</td>
+                    <td id="T_5R_2C_3" onclick="checkTicketNumber(this.id)">29</td>
+                    <td></td>
+                    <td id="T_5R_2C_5" onclick="checkTicketNumber(this.id)">46</td>
+                    <td>  </td>
+                    <td id="T_5R_2C_7" onclick="checkTicketNumber(this.id)">64</td>
+                    <td id="T_5R_2C_8" onclick="checkTicketNumber(this.id)">71</td>
+                    <td>  </td>
+                </tr>
+                <tr>
+                    <td id="T_5R_3C_1" onclick="checkTicketNumber(this.id)">9</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_5R_3C_4" onclick="checkTicketNumber(this.id)">35</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_5R_3C_7" onclick="checkTicketNumber(this.id)">66</td>
+                    <td id="T_5R_3C_8" onclick="checkTicketNumber(this.id)">72</td>
+                    <td id="T_5R_3C_9" onclick="checkTicketNumber(this.id)">87</td>
+                </tr>
+            </table>
+            <table style="width: auto; background-color:white" class="table table-bordered table-hover table-condensed">
+                <tr>
+                    <td>  </td>
+                    <td id="T_6R_1C_2" onclick="checkTicketNumber(this.id)">13</td>
+                    <td id="T_6R_1C_3" onclick="checkTicketNumber(this.id)">21</td>
+                    <td id="T_6R_1C_4" onclick="checkTicketNumber(this.id)">30</td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_6R_1C_7" onclick="checkTicketNumber(this.id)">68</td>
+                    <td id="T_6R_1C_8" onclick="checkTicketNumber(this.id)">77</td>
+                    <td>  </td>
+                    <td id="ticket6Remain" rowspan="3">15 <Br />To go</td>
+                </tr>
+                <tr>
+                    <td id="T_6R_2C_1" onclick="checkTicketNumber(this.id)">3</td>
+                    <td>  </td>
+                    <td id="T_6R_2C_3" onclick="checkTicketNumber(this.id)">25</td>
+                    <td id="T_6R_2C_4" onclick="checkTicketNumber(this.id)">31</td>
+                    <td>  </td>
+                    <td id="T_6R_2C_6" onclick="checkTicketNumber(this.id)">51</td>
+                    <td id="T_6R_2C_7" onclick="checkTicketNumber(this.id)">69</td>
+                    <td>  </td>
+                    <td>  </td>
+                </tr>
+                <tr>
+                    <td>  </td>
+                    <td>  </td>
+                    <td id="T_6R_3C_3" onclick="checkTicketNumber(this.id)">27</td>
+                    <td></td>
+                    <td id="T_6R_3C_5" onclick="checkTicketNumber(this.id)">42</td>
+                    <td id="T_6R_3C_6" onclick="checkTicketNumber(this.id)">54</td>
+                    <td>  </td>
+                    <td id="T_6R_3C_8" onclick="checkTicketNumber(this.id)">79</td>
+                    <td id="T_6R_3C_9" onclick="checkTicketNumber(this.id)">85</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>
