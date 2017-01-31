@@ -14,7 +14,8 @@ To install solution please follow the steps below:
 3. Extract the files to your Visual Studio projects directory
 4. Open the solution in Visual Studio
 5. Build the solution
-6. Debug the solution using Google Chrome
+6. Set 'bingoHome.html as the start page
+7. Debug the solution using Google Chrome
 
 To play the bingo game please follow the step below:
 1. Click the 'Buy tickets' button.  (This functionality is included just to add to the feel of what has been built).
